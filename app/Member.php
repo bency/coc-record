@@ -19,7 +19,7 @@ class Member extends Model
     ];
     public function records()
     {
-        return $this->hasMany('App\Member');
+        return $this->hasMany('App\MemberRecord');
     }
 
     public function clan()
