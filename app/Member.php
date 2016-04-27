@@ -11,4 +11,9 @@ class Member extends Model
     {
         return $this->hasMany('App\Member');
     }
+
+    public function clan()
+    {
+        return $this->belongsTo('App\Clan');
+    }
 }
