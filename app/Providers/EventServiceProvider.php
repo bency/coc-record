@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\UpdateClan' => [
             'App\Listeners\UpdateClansListener',
         ],
+        'App\Events\CreateClanRecord' => [
+            'App\Listeners\CreateClanRecordListener',
+        ],
     ];
 
     /**
