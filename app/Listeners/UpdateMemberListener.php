@@ -26,9 +26,20 @@ class UpdateMemberListener
      */
     public function handle(UpdateMember $event)
     {
+        $member_data_key = [
+            'tag',
+            'name',
+            'role',
+            'expLevel',
+            'trophies',
+            'clanRank',
+            'previousClanRank',
+            'donations',
+            'donationsReceived',
+        ];
         $data = $event->data['memberList'];
         foreach ($data as $d) {
-            $member_data = array_only($d, ['name', 'tag']);
+            $member_data = array_only($d, $member_data_key);
             $member = $event->clan->members()->UpdateOrCreate($member_data);
         }
     }

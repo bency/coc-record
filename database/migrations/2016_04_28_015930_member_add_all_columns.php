@@ -13,14 +13,13 @@ class MemberAddAllColumns extends Migration
     public function up()
     {
         Schema::table('members', function (Blueprint $table) {
-            $table->string('role');
-            $table->integer('expLevel');
-            $table->text('league');
-            $table->integer('trophies');
-            $table->integer('clanRank');
-            $table->integer('previousClanRank');
-            $table->integer('donations');
-            $table->integer('donationsReceived');
+            $table->string('role')->after('name');
+            $table->integer('expLevel')->after('name');
+            $table->integer('trophies')->after('name');
+            $table->integer('clanRank')->after('name');
+            $table->integer('previousClanRank')->after('name');
+            $table->integer('donations')->after('name');
+            $table->integer('donationsReceived')->after('name');
         });
     }
 
@@ -34,7 +33,6 @@ class MemberAddAllColumns extends Migration
         Schema::table('members', function (Blueprint $table) {
             $table->dropColumn('role');
             $table->dropColumn('expLevel');
-            $table->dropColumn('league');
             $table->dropColumn('trophies');
             $table->dropColumn('clanRank');
             $table->dropColumn('previousClanRank');
