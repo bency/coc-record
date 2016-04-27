@@ -11,4 +11,9 @@ class Clan extends Model
     {
         return $this->hasMany('App\ClanRecord');
     }
+
+    public function members()
+    {
+        return $this->hasMany('App\Member');
+    }
 }
