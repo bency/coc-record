@@ -34,5 +34,6 @@ class UpdateClansListener
         $clan_data = array_only($data, ['name', 'tag']);
         $clan = Clan::UpdateOrCreate($clan_data);
         \Event::fire(new \App\Events\CreateClanRecord($clan, $data));
+        \Event::fire(new \App\Events\UpdateMember($clan, $data));
     }
 }
