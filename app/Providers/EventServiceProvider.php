@@ -22,6 +22,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\UpdateMember' => [
             'App\Listeners\UpdateMemberListener',
         ],
+        'App\Events\CreateMemberRecord' => [
+            'App\Listeners\CreateMemberRecordListener',
+        ],
     ];
 
     /**
