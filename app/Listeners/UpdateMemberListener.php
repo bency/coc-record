@@ -41,6 +41,7 @@ class UpdateMemberListener
         foreach ($data as $d) {
             $member_data = array_only($d, $member_data_key);
             $member = $event->clan->members()->UpdateOrCreate($member_data);
+            \Event::fire(new \App\Events\CreateMemberRecord($member, $d));
         }
     }
 }
