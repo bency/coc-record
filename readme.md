@@ -18,4 +18,5 @@
 1. 最後再執行
 
         $ php artisan optimize
+        $ php artisan migrate
 1. 大功告成！
