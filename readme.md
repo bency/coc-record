@@ -1,27 +1,23 @@
-# Laravel PHP Framework
+# COC Record
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+記錄桃花源部落的一舉一動
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## 安裝說明
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+1. 需符合 laravel 5.2.x 的環境需求
+1. 到 https://developer.clashofclans.com/ 申請 api secret key
+1. 執行以下命令
 
-## Official Documentation
+	$ composer php -r "copy('.env.example', '.env');"
+	
+	$ php artisan key:generate
+1. 在 .env 的 COC_API_KEY 中填上申請的 api key
+1. 如果需要 PROXY 設定，再請自行填入，這不強制
+1. 設定 crontab（以定期更新線上的資料到資料庫）
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+    \* * * * * root /path/to/php /path/to/artisan schedule:run >> /dev/null 2>&1
 
-## Contributing
+1. 最後再執行
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+	$ php artisan optimize
+1. 大功告成！
