@@ -40,7 +40,7 @@ class FetchCOC extends Command
      */
     public function handle()
     {
-        $curl = Curl::to(env('COC_API_ENDPOINT') . '/clans/' . env('COC_CLANHASH'))
+        $curl = Curl::to(env('COC_API_ENDPOINT') . '/clans/' . urlencode(env('COC_CLANHASH')))
             ->withHeader('authorization: Bearer ' . env('COC_API_KEY'))
             ->enableDebug('/tmp/curl-error.txt');
         if (env('PROXY') and env('PROXY_AUTH')) {
