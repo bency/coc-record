@@ -40,10 +40,13 @@ class FetchCOC extends Command
      */
     public function handle()
     {
-        $raw_data = Curl::to(env('COC_API_ENDPOINT') . '/clans/' . env('COC_CLANHASH'))
+        $curl = Curl::to(env('COC_API_ENDPOINT') . '/clans/' . env('COC_CLANHASH'))
             ->withHeader('authorization: Bearer ' . env('COC_API_KEY'))
-            ->enableDebug('/tmp/curl-error.txt')
-            ->get();
+            ->enableDebug('/tmp/curl-error.txt');
+        if (env('PROXY') and env('PROXY_AUTH')) {
+            $curl->withOption('PROXY', env('PROXY'))->withOption('PROXYUSERPWD', env('PROXY_AUTH'));
+        }
+        $raw_data = $curl->get();
         $data = json_decode($raw_data, true);
         Event::fire(new UpdateClan($data));
     }
