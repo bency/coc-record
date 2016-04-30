@@ -29,6 +29,9 @@
 1. 設定 crontab（以定期更新線上的資料到資料庫）
 
         * * * * * root /path/to/php /path/to/artisan schedule:run >> /dev/null 2>&1
+1. 調整以下資料夾讓網頁伺服器有寫入的權限
+
+        storage/app storage/framework storage/logs
 1. 最後再執行
 
         $ php artisan optimize
