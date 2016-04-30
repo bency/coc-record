@@ -2,9 +2,23 @@
 
 記錄桃花源部落的一舉一動
 
-## 安裝說明
 
-1. 需符合 laravel 5.2.x 的環境需求
+## 環境需求
+### laravel 5.2.x 的環境需求
+1. PHP >= 5.5.9
+1. OpenSSL PHP Extension
+1. PDO PHP Extension
+1. Mbstring PHP Extension
+1. Tokenizer PHP Extension
+
+### node.js
+1. node.js 本身
+1. node.js 管理套件 npm
+1. global gulp
+
+		$ npm install --global gulp
+
+## 安裝說明
 1. 到 https://developer.clashofclans.com/ 申請 api secret key
 1. 執行以下命令
 
