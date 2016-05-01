@@ -17,6 +17,9 @@
 1. global gulp
 
 		$ npm install --global gulp
+1. global bower
+
+        $ npm install --global bower
 
 ## 安裝說明
 1. 到 https://developer.clashofclans.com/ 申請 api secret key
@@ -36,4 +39,5 @@
 
         $ php artisan optimize
         $ php artisan migrate
+        $ bower install
 1. 大功告成！
