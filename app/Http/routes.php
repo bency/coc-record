@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('dashboard');
 });
+
+Route::get('member', 'MemberController@showInfo');
+Route::get('member/{id}', 'MemberController@showInfo');
