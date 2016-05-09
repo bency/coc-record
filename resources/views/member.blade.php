@@ -44,6 +44,15 @@
                 <ul class="mdl-list">
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">
+                            <i class="fa fa-2x fa-trophy mdl-list__item-icon" aria-hidden="true"></i>
+                            {{ $member->trophies }}
+                            (
+                            {{ ($member->diff('trophies')) > 0 ? '+' : ''}}{{ $member->diff('trophies') }}
+                            )
+                        </span>
+                    </li>
+                    <li class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon">gavel</i>
                             From
                             {{ $member->previousClanRank }}
