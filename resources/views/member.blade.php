@@ -19,7 +19,7 @@
                 @foreach ($members as $member)
                 <tr>
                     <td>
-                        {{ $member->id }}
+                        {{ $member->clanRank}}
                     </td>
                     <td>
                         {{ $member->name }}
