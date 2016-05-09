@@ -39,6 +39,6 @@ class Member extends Model
             throw new \Exception('No such column: ' . $column);
         }
         $record = $this->records()->first()->$column;
-        return $this->$column - $record;
+        return $record - $this->$column;
     }
 }
