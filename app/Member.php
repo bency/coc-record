@@ -42,6 +42,6 @@ class Member extends Model
         if (!$record) {
             return 0;
         }
-        return $record->$column - $this->$column;
+        return $this->$column - $record->$column;
     }
 }
