@@ -45,6 +45,9 @@
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon">gavel</i>
+                            From
+                            {{ $member->previousClanRank }}
+                            To
                             {{ $member->clanRank  }}
                         </span>
                     </li>
