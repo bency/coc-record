@@ -38,7 +38,7 @@ class Member extends Model
         if (!in_array($column, $this->fillable)) {
             throw new \Exception('No such column: ' . $column);
         }
-        $record = $this->records()->first()->$column;
+        $record = $this->records()->orderBy('created_at', 'DESC')->first()->$column;
         return $record - $this->$column;
     }
 }
