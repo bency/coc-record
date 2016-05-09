@@ -16,7 +16,7 @@ class MemberController extends Controller
      */
     public function showInfo($id = 0)
     {
-        $members = Member::orderBy('created_at', 'asc')->get();
+        $members = Member::orderBy('clanRank', 'asc')->get();
         if (0 == $id) {
             return view('member', ['members' => $members, 'member' => []]);
         }
