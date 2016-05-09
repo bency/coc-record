@@ -64,12 +64,18 @@
                         <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon">call_received</i>
                             {{ $member->donationsReceived }}
+                            (
+                            {{ ($member->diff('donationsReceived')) > 0 ? '+' : ''}}{{ $member->diff('donationsReceived') }}
+                            )
                         </span>
                     </li>
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon">call_made</i>
                             {{ $member->donations }}
+                            (
+                            {{ ($member->diff('donations')) > 0 ? '+' : ''}}{{ $member->diff('donations') }}
+                            )
                         </span>
                     </li>
                 </ul>
