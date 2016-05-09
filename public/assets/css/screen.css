@@ -1,0 +1,27 @@
+body {
+    padding-bottom: 20px;
+    background: #f2f4fa;
+}
+.panel {
+    background: #FFF;
+}
+.header-image {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 25%;
+    background: url(//cdn.supercell.com/supercell.com/160503105756/all/themes/supercell/img/parallax/coc1512_parallax_bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.header-image h1 {
+    margin: 0 auto;
+    text-align:center;
+    color: #fff;
+    text-shadow: -2px 2px 30px rgba(0,0,0,0.25),-2px 4px 14px rgba(0,0,0,0.1);
+}
+.navigation {
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+.navigation button {
+    margin: 2px;
+}
