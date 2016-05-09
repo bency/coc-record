@@ -53,13 +53,13 @@
                     </li>
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-icon">archive</i>
+                            <i class="material-icons mdl-list__item-icon">call_received</i>
                             {{ $member->donationsReceived }}
                         </span>
                     </li>
                     <li class="mdl-list__item">
                         <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-icon">unarchive</i>
+                            <i class="material-icons mdl-list__item-icon">call_made</i>
                             {{ $member->donations }}
                         </span>
                     </li>
