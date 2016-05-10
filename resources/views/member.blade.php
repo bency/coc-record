@@ -6,38 +6,46 @@
 <div class="mdl-cell mdl-cell--12-col section--center mdl-grid">
     <!-- 新任務的表單 -->
     {{ csrf_field() }}
-    <div class="list mdl-cell mdl-cell--3-col">
-    @if (count($members) > 0)
-        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($members as $member)
-                <tr>
-                    <td>
-                        {{ $member->clanRank}}
-                    </td>
-                    <td>
-                        {{ $member->name }}
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @endif
+    <div class="mdl-cell mdl-cell--2-col">
+        <img src="{{$clan->getBadgeUrl($clan->badgeUrls)}}" style="max-width:150px; max-height: 150px;">
     </div>
-    <div class="mdl-cell mdl-cell--9-col mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col">
+        <h3>{{$clan->name}}</h3>
+    </div>
+    <div class="clanInfo mdl-cell--8-col">
+        <ul class="mdl-list">
+            <li>
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">cake</i>
+                    {{$clan->clanLevel}}
+                </span>
+            </li>
+            <li>
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">person</i>
+                    {{$clan->members}}
+                </span>
+            </li>
+            <li>
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">check circle</i>
+                    {{$clan->warWins}}
+                </span>
+            </li>
+            <li>
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons mdl-list__item-icon">add</i>
+                    {{$clan->warWinStreak}}
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="mdl-cell mdl-cell--12-col mdl-grid">
     @if (count($members) > 0)
         @foreach ($members as $member)
         <div class="mdl-cell mdl-card mdl-shadow--4dp">
-            <div class="mdl-card__media">
-                <img src="//cdn.supercell.com/supercell.com/160503105756/all/themes/supercell/img/parallax/coc1512_parallax_bg.jpg" style="max-width: 400px">
-            </div>
-            <div class="mdl-card__title">
+            <div class="mdl-card__title card-header">
                 <h2 class="mdl-card__title-text">{{ $member->name  }}</h2>
             </div>
             <div class="mdl-card__supporting-text">

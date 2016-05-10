@@ -25,3 +25,19 @@ body {
 .navigation button {
     margin: 2px;
 }
+.card-header {
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 25%;
+    background: url(//clashofclans.com/uploaded-images/_510x300_crop_center-center_90/Battle_Day.jpg?mtime=20151106110620) center no-repeat;
+    background-size: cover;
+}
+.card-header h2 {
+    margin: 0 auto;
+    text-align:center;
+    color: #fff;
+    text-shadow: -2px 2px 30px rgba(0,0,0,0.25),-2px 4px 14px rgba(0,0,0,0.1);
+}
+.mdl-list li {
+    padding: 0px;
+}
