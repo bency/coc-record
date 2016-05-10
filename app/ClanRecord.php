@@ -24,4 +24,9 @@ class ClanRecord extends Model
     {
         return $this->belongsTo('App\Clan');
     }
+    public function getBadgeUrl($badgeUrl, $type = 'large')
+    {
+        $url = json_decode($badgeUrl, true)[$type];
+        return $url;
+    }
 }
