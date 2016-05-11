@@ -17,7 +17,7 @@ class MemberController extends Controller
      */
     public function showInfo($id = 0)
     {
-        $clan_info = ClanRecord::findOrFail(1);
+        $clan_info = ClanRecord::orderBy('created_at', "DESC")->first();
         $clan_info = $clan_info->formatClanRecord($clan_info);
         $members = Member::orderBy('clanRank', 'asc')->get();
         if (0 == $id) {
