@@ -7,7 +7,7 @@
     <!-- 新任務的表單 -->
     {{ csrf_field() }}
     <div class="mdl-cell mdl-cell--2-col">
-        <img src="{{$clan->getBadgeUrl($clan->badgeUrls)}}" style="max-width:150px; max-height: 150px;">
+        <img src="{{$clan->large_icon}}" style="max-width:150px; max-height: 150px;">
     </div>
     <div class="mdl-cell mdl-cell--2-col">
         <h3>{{$clan->name}}</h3>
@@ -17,7 +17,7 @@
             <li>
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">cake</i>
-                    {{$clan->clanLevel}}
+                    {{$clan->level}}
                 </span>
             </li>
             <li>
@@ -29,13 +29,13 @@
             <li>
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">check circle</i>
-                    {{$clan->warWins}}
+                    {{$clan->wins}}
                 </span>
             </li>
             <li>
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">add</i>
-                    {{$clan->warWinStreak}}
+                    {{$clan->win_streak}}
                 </span>
             </li>
         </ul>
