@@ -41,3 +41,7 @@
         $ php artisan migrate
         $ bower install
 1. 大功告成！
+
+## 檢視 API 資料
+
+    php artisan coc:fetchclan --dry-run
