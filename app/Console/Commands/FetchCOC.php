@@ -14,7 +14,7 @@ class FetchCOC extends Command
      *
      * @var string
      */
-    protected $signature = 'coc:fetchclan';
+    protected $signature = 'coc:fetchclan {--dry-run=*}';
 
     /**
      * The console command description.
@@ -40,6 +40,7 @@ class FetchCOC extends Command
      */
     public function handle()
     {
+        $options = $this->option();
         $curl = Curl::to(env('COC_API_ENDPOINT') . '/clans/' . urlencode(env('COC_CLANHASH')))
             ->withHeader('authorization: Bearer ' . env('COC_API_KEY'))
             ->enableDebug('/tmp/curl-error.txt');
@@ -48,6 +49,9 @@ class FetchCOC extends Command
         }
         $raw_data = $curl->get();
         $data = json_decode($raw_data, true);
+        if(isset($options['dry-run'])) {
+            return var_dump($data);
+        }
         Event::fire(new UpdateClan($data));
     }
 }
