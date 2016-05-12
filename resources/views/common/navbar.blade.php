@@ -10,8 +10,8 @@
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="javascript:void(0)">Active</a></li>
-        <li><a href="javascript:void(0)">Link</a></li>
+        <li><a href="{{ url('/') }}">部落近況</a></li>
+        <li><a href="{{ url('/member') }}">成員列表</a></li>
         <li class="dropdown">
           <a href="#" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
             <b class="caret"></b></a>
