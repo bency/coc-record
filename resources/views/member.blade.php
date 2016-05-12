@@ -19,25 +19,25 @@
     <div class="col-md-8">
         <ul class="list-group">
             <li class="list-group-item">
-                <span class="mdl-list__item-primary-content">
+                <span class="">
                     <i class="material-icons mdl-list__item-icon">cake</i>
                     {{$clan->level}}
                 </span>
             </li>
             <li class="list-group-item">
-                <span class="mdl-list__item-primary-content">
+                <span class="">
                     <i class="material-icons mdl-list__item-icon">person</i>
                     {{$clan->members}}
                 </span>
             </li>
             <li class="list-group-item">
-                <span class="mdl-list__item-primary-content">
+                <span class="">
                     <i class="material-icons mdl-list__item-icon">check circle</i>
                     {{$clan->wins}}
                 </span>
             </li>
             <li class="list-group-item">
-                <span class="mdl-list__item-primary-content">
+                <span class="">
                     <i class="material-icons mdl-list__item-icon">add</i>
                     {{$clan->win_streak}}
                 </span>
@@ -56,44 +56,36 @@
                 <h2 class="mdl-card__title-text">{{ $member->name  }}</h2>
             </div>
             <div class="mdl-card__supporting-text">
-                <ul class="list-group">
-                    <li class="list-group-item list-group-item-info">
-                        <span class="">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-primary">
                             <i class="fa fa-2x fa-trophy" aria-hidden="true"></i>
                             {{ $member->trophies }}
                             (
                             {{ ($member->diff('trophies')) > 0 ? '+' : ''}}{{ $member->diff('trophies') }}
                             )
-                        </span>
-                    </li>
-                    <li class="list-group-item list-group-item-info">
-                        <span class="">
+                    </a>
+                    <a class="list-group-item list-group-item-info">
                             <i class="">gavel</i>
                             From
                             {{ $member->previousClanRank }}
                             To
                             {{ $member->clanRank  }}
-                        </span>
-                    </li>
-                    <li class="list-group-item list-group-item-info">
-                        <span class="">
+                    </a>
+                    <a class="list-group-item list-group-item-info">
                             <i class="">call_received</i>
                             {{ $member->donationsReceived }}
                             (
                             {{ ($member->diff('donationsReceived')) > 0 ? '+' : ''}}{{ $member->diff('donationsReceived') }}
                             )
-                        </span>
-                    </li>
-                    <li class="list-group-item list-group-item-info">
-                        <span class="">
+                    </a>
+                    <a class="list-group-item list-group-item-info">
                             <i class="">call_made</i>
                             {{ $member->donations }}
                             (
                             {{ ($member->diff('donations')) > 0 ? '+' : ''}}{{ $member->diff('donations') }}
                             )
-                        </span>
-                    </li>
-                </ul>
+                    </a>
+                </div>
             </div>
             <div class="mdl-card__actions mdl-card--border">
                 <a class="btn btn-info">
