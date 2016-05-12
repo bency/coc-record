@@ -38,9 +38,10 @@
 1. 最後再執行
 
         $ php artisan optimize
-        $ php artisan migrate
-        $ npm install
-        $ bower install
+        $ php artisan migrate # 建立資料庫結構
+        $ npm install # 安裝安裝前端套件所需要的套件
+        $ bower install # 安裝前端套件
+        $ gulp # 建立 css
 1. 大功告成！
 
 ## 檢視 API 資料
