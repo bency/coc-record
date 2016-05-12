@@ -14,8 +14,5 @@
         <script src="{{ asset('/components/Bootflat/js/jquery-1.10.1.min.js') }}"></script>
         <script src="{{ asset('/components/Bootflat/js/bootstrap.min.js') }}"></script>
         @stack('tail-scripts')
-		<script>
-		$.material.init()
-		</script>
     </body>
 </html>
