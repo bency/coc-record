@@ -65,21 +65,21 @@
                             )
                     </a>
                     <a class="list-group-item">
-                            <i class="">gavel</i>
+                            <i class="fa fa-2x fa-flag"></i>
                             From
                             {{ $member->previousClanRank }}
                             To
                             {{ $member->clanRank  }}
                     </a>
                     <a class="list-group-item">
-                            <i class="">call_received</i>
+                            <i class="fa fa-2x fa-level-down"></i>
                             {{ $member->donationsReceived }}
                             (
                             {{ ($member->diff('donationsReceived')) > 0 ? '+' : ''}}{{ $member->diff('donationsReceived') }}
                             )
                     </a>
                     <a class="list-group-item">
-                            <i class="">call_made</i>
+                            <i class="fa fa-2x fa-level-down fa-rotate-180"></i>
                             {{ $member->donations }}
                             (
                             {{ ($member->diff('donations')) > 0 ? '+' : ''}}{{ $member->diff('donations') }}
