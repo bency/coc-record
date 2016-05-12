@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>COC Record - {{ $title or ""}}</title>
         <link rel="stylesheet" href="{{ asset('/components/Bootflat/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('/assets/css/screen.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
         @stack('head-scripts')
     </head>
     <body>
