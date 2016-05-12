@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "Chart.js": "~2.0.2",
-    "Bootflat": "^2.0.4"
+    "Bootflat": "^2.0.4",
+    "font-awesome": "^4.6.2"
   }
 }
