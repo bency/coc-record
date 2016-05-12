@@ -55,7 +55,6 @@
             <div class="card-header">
                 <h2 class="mdl-card__title-text">{{ $member->name  }}</h2>
             </div>
-            <div class="mdl-card__supporting-text">
                 <div class="list-group">
                     <a class="list-group-item">
                         <p class="text-center">
@@ -94,12 +93,9 @@
                         </p>
                     </a>
                 </div>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
                 <a class="btn btn-info">
                       View Detail
                 </a>
-            </div>
             </div>
         </div>
         @endforeach
