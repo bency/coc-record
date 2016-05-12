@@ -19,28 +19,28 @@
     <div class="col-md-8">
         <ul class="list-group">
             <li class="list-group-item">
-                <span class="">
-                    <i class="material-icons mdl-list__item-icon">cake</i>
+                <h5 class="text-center">
+                    <i class="fa fa-shield"></i>
                     {{$clan->level}}
-                </span>
+                </h5>
             </li>
             <li class="list-group-item">
-                <span class="">
-                    <i class="material-icons mdl-list__item-icon">person</i>
+                <h5 class="text-center">
+                    <i class="fa fa-user"></i>
                     {{$clan->members}}
-                </span>
+                </h5>
             </li>
             <li class="list-group-item">
-                <span class="">
-                    <i class="material-icons mdl-list__item-icon">check circle</i>
+                <h5 class="text-center">
+                    <i class="fa fa-flag-checkered"></i>
                     {{$clan->wins}}
-                </span>
+                </h5>
             </li>
             <li class="list-group-item">
-                <span class="">
-                    <i class="material-icons mdl-list__item-icon">add</i>
+                <h5 class="text-center">
+                    <i class="fa fa-bolt"></i>
                     {{$clan->win_streak}}
-                </span>
+                </h5>
             </li>
         </ul>
     </div>
