@@ -49,7 +49,7 @@ class FetchCOC extends Command
         }
         $raw_data = $curl->get();
         $data = json_decode($raw_data, true);
-        if(isset($options['dry-run'])) {
+        if(count($options['dry-run'])) {
             return var_dump($data);
         }
         Event::fire(new UpdateClan($data));
