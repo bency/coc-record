@@ -39,6 +39,7 @@
 
         $ php artisan optimize
         $ php artisan migrate
+        $ npm install
         $ bower install
 1. 大功告成！
 
