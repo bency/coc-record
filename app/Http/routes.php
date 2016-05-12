@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('member', 'MemberController@showInfo');
 Route::get('member/{id}', 'MemberController@showInfo');
 Route::get('/clan/history/trophins', function () {
-    $points = \App\ClanRecord::where('created_at', ">", strtotime('-1day'))->get(['clanPoints', 'created_at'])->every(10);
+    $points = \App\ClanRecord::where('created_at', ">", date('Y-m-d H:i:s', strtotime('-1day')))->get(['clanPoints', 'created_at'])->every(10);
     foreach ($points as $point) {
         $labels[] = date('Y-m-d H:i', $point->created_at->getTimestamp());
         $datasets[] = $point->clanPoints;
