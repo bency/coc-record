@@ -11,10 +11,8 @@
         <div class="container">
         @yield('content')
         </div>
-        <script src="{{ asset('/components/jquery/dist/jquery.min.js') }}"></script>
-        <script src="{{ asset('/components/bootstrap/dist/js/bootstrap.js') }}"></script>
-        <script src="{{ asset('/components/bootstrap-material-design/dist/js/ripples.min.js') }}"></script>
-        <script src="{{ asset('/components/bootstrap-material-design/dist/js/material.min.js') }}"></script>
+        <script src="{{ asset('/components/Bootflat/js/jquery-1.10.1.min.js') }}"></script>
+        <script src="{{ asset('/components/Bootflat/js/bootstrap.min.js') }}"></script>
         @stack('tail-scripts')
 		<script>
 		$.material.init()
