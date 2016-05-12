@@ -25,7 +25,7 @@
 1. 到 https://developer.clashofclans.com/ 申請 api secret key
 1. 執行以下命令
 
-        $ composer php -r "copy('.env.example', '.env');"
+        $ php -r "copy('.env.example', '.env');"
         $ php artisan key:generate
 1. 在 .env 的 COC_API_KEY 中填上申請的 api key
 1. 如果需要 PROXY 設定，再請自行填入，這不強制
