@@ -64,21 +64,21 @@
                             {{ ($member->diff('trophies')) > 0 ? '+' : ''}}{{ $member->diff('trophies') }}
                             )
                     </a>
-                    <a class="list-group-item list-group-item-info">
+                    <a class="list-group-item list-group-item-primary">
                             <i class="">gavel</i>
                             From
                             {{ $member->previousClanRank }}
                             To
                             {{ $member->clanRank  }}
                     </a>
-                    <a class="list-group-item list-group-item-info">
+                    <a class="list-group-item list-group-item-primary">
                             <i class="">call_received</i>
                             {{ $member->donationsReceived }}
                             (
                             {{ ($member->diff('donationsReceived')) > 0 ? '+' : ''}}{{ $member->diff('donationsReceived') }}
                             )
                     </a>
-                    <a class="list-group-item list-group-item-info">
+                    <a class="list-group-item list-group-item-primary">
                             <i class="">call_made</i>
                             {{ $member->donations }}
                             (
