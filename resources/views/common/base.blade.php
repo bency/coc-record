@@ -11,7 +11,7 @@
     <body>
         @include('common.navbar')
         <div class="container">
-        @section('content')
+        @yield('content')
         </div>
         <script src="{{ asset('/components/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('/components/bootstrap/dist/js/bootstrap.js') }}"></script>
