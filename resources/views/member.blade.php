@@ -93,7 +93,7 @@
                         </p>
                     </a>
                 </div>
-                <a class="btn btn-info">
+                <a class="btn btn-info btn-block">
                       View Detail
                 </a>
             </div>
