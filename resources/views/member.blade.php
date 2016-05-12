@@ -58,32 +58,40 @@
             <div class="mdl-card__supporting-text">
                 <div class="list-group">
                     <a class="list-group-item">
+                        <p class="text-center">
                             <i class="fa fa-2x fa-trophy" aria-hidden="true"></i>
                             {{ $member->trophies }}
                             (
                             {{ ($member->diff('trophies')) > 0 ? '+' : ''}}{{ $member->diff('trophies') }}
                             )
+                        </p>
                     </a>
                     <a class="list-group-item">
+                        <p class="text-center">
                             <i class="fa fa-2x fa-flag"></i>
                             From
                             {{ $member->previousClanRank }}
                             To
                             {{ $member->clanRank  }}
+                        </p>
                     </a>
                     <a class="list-group-item">
+                        <p class="text-center">
                             <i class="fa fa-2x fa-level-down"></i>
                             {{ $member->donationsReceived }}
                             (
                             {{ ($member->diff('donationsReceived')) > 0 ? '+' : ''}}{{ $member->diff('donationsReceived') }}
                             )
+                        </p>
                     </a>
                     <a class="list-group-item">
+                        <p class="text-center">
                             <i class="fa fa-2x fa-level-down fa-rotate-180"></i>
                             {{ $member->donations }}
                             (
                             {{ ($member->diff('donations')) > 0 ? '+' : ''}}{{ $member->diff('donations') }}
                             )
+                        </p>
                     </a>
                 </div>
             </div>
