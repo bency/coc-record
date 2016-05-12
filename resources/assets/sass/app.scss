@@ -1,4 +1,6 @@
  @import "public/components/Bootflat/bootflat/scss/bootflat.scss";
+ $fa-font-path:   "../components/font-awesome/fonts";
+ @import "public/components/font-awesome/scss/font-awesome.scss";
 body {
     padding-bottom: 20px;
     background: #f2f4fa;
