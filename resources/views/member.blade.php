@@ -2,37 +2,41 @@
 
 @section('content')
 
-
-<div class="mdl-cell mdl-cell--12-col section--center mdl-grid">
+<div class="header-image">
+    <h1>COC record</h1>
+</div>
+<div class="col-md-12">
+    <div class="jumbotron">
+    <div class="container">
     <!-- 新任務的表單 -->
     {{ csrf_field() }}
-    <div class="mdl-cell mdl-cell--2-col">
+    <div class="col-md-2">
         <img src="{{$clan->large_icon}}" style="max-width:150px; max-height: 150px;">
     </div>
-    <div class="mdl-cell mdl-cell--2-col">
+    <div class="col-md-2">
         <h3>{{$clan->name}}</h3>
     </div>
-    <div class="clanInfo mdl-cell--8-col">
-        <ul class="mdl-list">
-            <li>
+    <div class="col-md-8">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">cake</i>
                     {{$clan->level}}
                 </span>
             </li>
-            <li>
+            <li class="list-group-item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">person</i>
                     {{$clan->members}}
                 </span>
             </li>
-            <li>
+            <li class="list-group-item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">check circle</i>
                     {{$clan->wins}}
                 </span>
             </li>
-            <li>
+            <li class="list-group-item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">add</i>
                     {{$clan->win_streak}}
@@ -40,46 +44,49 @@
             </li>
         </ul>
     </div>
+    </div>
+    </div>
 </div>
-    <div class="mdl-cell mdl-cell--12-col mdl-grid">
+    <div class="col-md-12">
     @if (count($members) > 0)
         @foreach ($members as $member)
-        <div class="mdl-cell mdl-card mdl-shadow--4dp">
-            <div class="mdl-card__title card-header">
+        <div class="col-md-4">
+            <div class="thumbnail">
+            <div class="card-header">
                 <h2 class="mdl-card__title-text">{{ $member->name  }}</h2>
             </div>
             <div class="mdl-card__supporting-text">
-                <ul class="mdl-list">
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <i class="fa fa-2x fa-trophy mdl-list__item-icon" aria-hidden="true"></i>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">
+                        <span class="">
+                            <i class="fa fa-2x fa-trophy" aria-hidden="true"></i>
                             {{ $member->trophies }}
                             (
                             {{ ($member->diff('trophies')) > 0 ? '+' : ''}}{{ $member->diff('trophies') }}
                             )
                         </span>
                     </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-icon">gavel</i>
+                    <li class="list-group-item list-group-item-info">
+                        <span class="">
+                            <i class="">gavel</i>
                             From
                             {{ $member->previousClanRank }}
                             To
                             {{ $member->clanRank  }}
                         </span>
                     </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-icon">call_received</i>
+                    <li class="list-group-item list-group-item-info">
+                        <span class="">
+                            <i class="">call_received</i>
                             {{ $member->donationsReceived }}
                             (
                             {{ ($member->diff('donationsReceived')) > 0 ? '+' : ''}}{{ $member->diff('donationsReceived') }}
                             )
                         </span>
                     </li>
-                    <li class="mdl-list__item">
-                        <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-icon">call_made</i>
+                    <li class="list-group-item list-group-item-info">
+                        <span class="">
+                            <i class="">call_made</i>
                             {{ $member->donations }}
                             (
                             {{ ($member->diff('donations')) > 0 ? '+' : ''}}{{ $member->diff('donations') }}
@@ -89,9 +96,10 @@
                 </ul>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                <a class="btn btn-info">
                       View Detail
                 </a>
+            </div>
             </div>
         </div>
         @endforeach
