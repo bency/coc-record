@@ -3,9 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>COC Record - {{ $title or ""}}</title>
-        <link rel="stylesheet" href="{{ asset('/components/bootstrap/dist/css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ asset('/components/bootstrap-material-design/dist/css/bootstrap-material-design.css') }}">
-        <link rel="stylesheet" href="{{ asset('/components/bootstrap-material-design/dist/css/ripples.css') }}">
+        <link rel="stylesheet" href="{{ asset('/components/Bootflat/css/bootstrap.min.css') }}">
         @stack('head-scripts')
     </head>
     <body>
