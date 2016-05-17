@@ -14,6 +14,7 @@
         </div>
         <script src="{{ asset('/components/Bootflat/js/jquery-1.10.1.min.js') }}"></script>
         <script src="{{ asset('/components/Bootflat/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/chartHelper.js') }}"></script>
         @stack('tail-scripts')
     </body>
 </html>

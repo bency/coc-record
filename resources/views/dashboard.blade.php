@@ -1,6 +1,7 @@
 @extends('common.base')
 @section('content')
 <div class="row">
+    <canvas id="donations"></canvas>
     <canvas id="trophins-history"></canvas>
 </div>
 @endsection
