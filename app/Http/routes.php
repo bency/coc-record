@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('member', 'MemberController@showInfo');
-Route::get('member/{id}', 'MemberController@showInfo');
+Route::get('member/info/{id}', 'MemberController@showInfo');
+Route::get('member/donations', 'MemberController@fetchDonationList');
+
 Route::get('/clan/history/trophins', function () {
     $points = \App\ClanRecord::where('created_at', ">", date('Y-m-d H:i:s', strtotime('-1day')))->get(['clanPoints', 'created_at'])->every(10);
     foreach ($points as $point) {
